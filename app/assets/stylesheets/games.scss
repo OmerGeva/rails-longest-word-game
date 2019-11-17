@@ -45,17 +45,31 @@ li {
   margin: 10px;
   border-radius: 5px;
 }
+#final-word{
+  border-radius: 4px;
+  padding: 8px;
+  color: white;
+  background-color: #385F71;
+}
 .form {
   margin-bottom: 40px;
 }
-.input {
+.text {
   height: 30px;
   border-radius: 6px;
+  font-weight: bolder;
+  font-size: 14px
 }
 .submit{
   height: 35px;
   border-radius: 4px;
+  font-size: 14px
 }
 p {
   font-size: 32px;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  font-weight: bolder;
+  font-size: 14px
 }

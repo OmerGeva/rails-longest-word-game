@@ -8,6 +8,9 @@ class GamesController < ApplicationController
     @grid = 10.times.map do
       ('A'..'Z').to_a.sample
     end
+    3.times.each do
+      @grid << ['a', 'e', 'i', 'o', 'u'].sample.upcase
+    end
   end
 
   def score
@@ -16,16 +19,16 @@ class GamesController < ApplicationController
     @word_attr = json_data(@word)
     @attempt_hash = {}
 
-    @word_exists = @word_attr["found"]
-    @score = (@word.length * 2) / @time
+    @word_exists = @word_attr['found']
+    @score = (@word.length * 5) / @time
     @in_grid = ifinclude?(@word.upcase.split(''), params[:grid].split)
 
     if @word_exists && @in_grid
-      @attempt_hash = { time: @time, score: @score, message: "Well Done!" }
+      @attempt_hash = { time: @time, score: @score, message: 'Well Done! 😌' }
     elsif @in_grid
-      @attempt_hash = { time: @time, score: 0, message: "not an english word" }
+      @attempt_hash = { time: @time, score: 0, message: 'Not an English word 😢' }
     else
-      @attempt_hash = { time: @time, score: 0, message: "not in the grid" }
+      @attempt_hash = { time: @time, score: 0, message: 'Not in the grid 😒' }
     end
   end
 

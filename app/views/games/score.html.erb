@@ -1,7 +1,11 @@
 <h1>You scored: </h1>
 
-<p>Score: <%= @attempt_hash[:score].round*10 %></p>
+<p>Score: <%= @attempt_hash[:score].round*7 %></p>
 <p>Time: <%= @attempt_hash[:time].round(2) %></p>
-<p>Word: <%=@word %></p>
+<p>Word: <span id="final-word"><%=@word %></span></p>
+<p><%=  @attempt_hash[:message] %></p>
 <br>
+<div class="current-word">
+
+</div>
 <%= link_to "New Word", "/new" %>
