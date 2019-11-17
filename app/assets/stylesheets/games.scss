@@ -1,0 +1,61 @@
+// Place all the styles related to the games controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+
+body {
+  background: #BDD5EA; // Using this variable
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+h1 {
+  font-size: 50px;
+  color: #73A580;
+  text-shadow: 0 10px 30px rgba(50,50,50,0.5);
+}
+a {
+  border-radius: 4px;
+  text-decoration: none;
+  background-color: #577399;
+  box-shadow: 0 10px 30px rgba(50,50,50,0.5);
+  font-size: 16px;
+  padding: 24px;
+  color: white;
+  &:hover {
+    background-color: #4D6587;
+  }
+}
+ul {
+  border-radius: 8px;
+  width: 800px;
+  justify-content: center;
+  margin: 32px auto;
+  padding: 30px;
+  background-color: #ffb4af;
+  box-shadow: 0 10px 30px rgba(50,50,50,0.5);
+
+}
+li {
+  font-size: 30px;
+  text-decoration: none;
+  display: inline;
+  background-color:  #FE5F55;
+  padding: 8px;
+  margin: 10px;
+  border-radius: 5px;
+}
+.form {
+  margin-bottom: 40px;
+}
+.input {
+  height: 30px;
+  border-radius: 6px;
+}
+.submit{
+  height: 35px;
+  border-radius: 4px;
+}
+p {
+  font-size: 32px;
+}

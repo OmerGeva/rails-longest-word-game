@@ -1,0 +1,18 @@
+<h1>New Game</h1>
+<ul>
+<% @grid.each do |letter| %>
+  <li><%= letter %></li>
+<% end %>
+</ul>
+
+
+<form class="form" action="/score" method="post">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <%= hidden_field_tag :grid, @grid %>
+  <%= hidden_field_tag :start_time, @start_time %>
+
+  <input class="input" type="text" name="word" placeholder="Your Word">
+  <input class="submit" type="submit">
+</form>
+
+<%= link_to "New Word List", "/new" %>
